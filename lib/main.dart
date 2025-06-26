@@ -10,6 +10,8 @@ class TaskApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: ProfileScreen());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: ProfileScreen());
   }
 }
