@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/core/utils/app_styles.dart';
 
 class MenuItem extends StatelessWidget {
   MenuItem({
@@ -16,7 +17,8 @@ class MenuItem extends StatelessWidget {
     return Column(
       children: [
         IconButton(onPressed: () {}, icon: Icon(icon, size: 50)),
-        Text(textmenu, style: TextStyle(color: Colors.black, fontSize: 16)),
+        Text(textmenu,
+            style: AppStyles.textSemiBold18(context).copyWith(fontSize: 15)),
       ],
     );
   }

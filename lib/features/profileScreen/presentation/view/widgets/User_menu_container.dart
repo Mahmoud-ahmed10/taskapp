@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/core/utils/app_strings.dart';
+import 'package:taskapp/core/utils/k_colors.dart';
 import 'package:taskapp/features/profileScreen/presentation/view/widgets/Menu_Item.dart';
 
 class UserMenuContainer extends StatelessWidget {
@@ -9,13 +11,32 @@ class UserMenuContainer extends StatelessWidget {
     return Container(
       height: 100,
       decoration: BoxDecoration(
-        color: Color(0xFFF485A4),
+        color: salmonColor,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          MenuItem(textmenu: 'Profile', icon: Icons.person, onpressed: () {}),
-          MenuItem(textmenu: 'Wishlist', icon: Icons.list, onpressed: () {}),
+          MenuItem(
+              textmenu: AppStrings.profile,
+              icon: Icons.person,
+              onpressed: () {}),
+          Container(
+            height: 50,
+            width: 1,
+            decoration: BoxDecoration(color: Colors.white),
+          ),
+          MenuItem(
+              textmenu: AppStrings.wishlist,
+              icon: Icons.favorite,
+              onpressed: () {}),
+          Container(
+            height: 50,
+            width: 1,
+            decoration: BoxDecoration(color: Colors.white),
+          ),
+          MenuItem(
+              textmenu: AppStrings.myOrder, icon: Icons.list, onpressed: () {}),
         ],
       ),
     );

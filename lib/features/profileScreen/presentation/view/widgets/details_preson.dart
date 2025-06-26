@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/core/utils/app_styles.dart';
 
 class DetailsPreson extends StatelessWidget {
   const DetailsPreson({super.key});
@@ -14,31 +15,22 @@ class DetailsPreson extends StatelessWidget {
         SizedBox(height: 10),
         Column(
           children: [
-            Text(
-              '7ooda',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            Text('7ooda',
+                textAlign: TextAlign.center,
+                style:
+                    AppStyles.textSemiBold18(context).copyWith(fontSize: 26)),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'ID',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                Text('ID',
+                    textAlign: TextAlign.center,
+                    style: AppStyles.textSemiBold18(context)
+                        .copyWith(fontSize: 20)),
                 Text(
                   ':25030024',
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.grey, fontSize: 18),
+                  style: AppStyles.textSemiBold18(context)
+                      .copyWith(fontSize: 18, color: Colors.grey),
                 ),
               ],
             ),
