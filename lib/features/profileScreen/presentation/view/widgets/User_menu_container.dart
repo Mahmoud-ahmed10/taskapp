@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:taskapp/core/utils/app_strings.dart';
 import 'package:taskapp/core/utils/k_colors.dart';
+import 'package:taskapp/features/profileScreen/presentation/view/edit_profile_screen.dart';
+import 'package:taskapp/features/profileScreen/presentation/view/my_order_screen.dart';
+import 'package:taskapp/features/profileScreen/presentation/view/profile_screen.dart';
 import 'package:taskapp/features/profileScreen/presentation/view/widgets/Menu_Item.dart';
 
 class UserMenuContainer extends StatelessWidget {
@@ -20,7 +24,9 @@ class UserMenuContainer extends StatelessWidget {
           MenuItem(
               textmenu: AppStrings.profile,
               icon: Icons.person,
-              onpressed: () {}),
+              onpressed: () {
+                Get.to(EditProfileScreen());
+              }),
           Container(
             height: 50,
             width: 1,
@@ -36,7 +42,11 @@ class UserMenuContainer extends StatelessWidget {
             decoration: BoxDecoration(color: Colors.white),
           ),
           MenuItem(
-              textmenu: AppStrings.myOrder, icon: Icons.list, onpressed: () {}),
+              textmenu: AppStrings.myOrder,
+              icon: Icons.list,
+              onpressed: () {
+                Get.to(MyOrderScreen());
+              }),
         ],
       ),
     );

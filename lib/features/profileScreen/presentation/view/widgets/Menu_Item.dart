@@ -16,7 +16,7 @@ class MenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        IconButton(onPressed: () {}, icon: Icon(icon, size: 50)),
+        IconButton(onPressed: onpressed, icon: Icon(icon, size: 50)),
         Text(textmenu,
             style: AppStyles.textSemiBold18(context).copyWith(fontSize: 15)),
       ],

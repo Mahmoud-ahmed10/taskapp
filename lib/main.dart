@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:taskapp/features/profileScreen/presentation/view/profile_screen.dart';
 
 void main() {
@@ -10,11 +11,9 @@ class TaskApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: ProfileScreen(),
     );
-
   }
 }

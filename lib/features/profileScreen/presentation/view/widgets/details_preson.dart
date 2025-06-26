@@ -9,8 +9,8 @@ class DetailsPreson extends StatelessWidget {
     return Column(
       children: [
         CircleAvatar(
-          radius: 80,
-          backgroundImage: AssetImage('assets/logo1.jpg'),
+          radius: 60,
+          // backgroundImage: AssetImage('assets/logo1.jpg'),
         ),
         SizedBox(height: 10),
         Column(
