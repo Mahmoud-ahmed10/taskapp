@@ -15,13 +15,16 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         appBar: buildAppBar(context, AppStrings.myProfile, true),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                DetailsPreson(),
+                DetailsPreson(
+                  color: Colors.white,
+                ),
                 CustomSpaceHeight(
                   height: .03,
                 ),
