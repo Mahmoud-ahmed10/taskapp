@@ -10,19 +10,22 @@ class ContainerUpdateProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15),
-      child: Container(
-        height: 45,
-        width: 220,
-        decoration: BoxDecoration(
-          color: salmonColor,
-          borderRadius: BorderRadius.circular(12),
+      child: GestureDetector(
+        onTap: () {},
+        child: Container(
+          height: 45,
+          width: 220,
+          decoration: BoxDecoration(
+            color: salmonColor,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Center(
+              child: Text(
+            AppStrings.updateProfile,
+            style:
+                AppStyles.textSemiBold24(context).copyWith(color: Colors.white),
+          )),
         ),
-        child: Center(
-            child: Text(
-          AppStrings.updateProfile,
-          style:
-              AppStyles.textSemiBold24(context).copyWith(color: Colors.white),
-        )),
       ),
     );
   }

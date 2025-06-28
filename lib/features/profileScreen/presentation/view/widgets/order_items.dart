@@ -54,8 +54,10 @@ class OrderItemCard extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Icon(Icons.delete_outline,
-                                size: 20, color: salmonColor),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(Icons.delete_outline,
+                                    size: 20, color: salmonColor)),
                             const SizedBox(width: 8),
                             Icon(Icons.add_circle_outline,
                                 size: 20, color: salmonColor),

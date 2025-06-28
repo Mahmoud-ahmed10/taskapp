@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:taskapp/Controller/controller.dart';
+import 'package:taskapp/controller/controller.dart';
 import 'package:taskapp/core/utils/app_styles.dart';
 import 'package:taskapp/core/utils/k_colors.dart';
 

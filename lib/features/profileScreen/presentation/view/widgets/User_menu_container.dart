@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
+import 'package:taskapp/controller/edit_details_controller.dart';
 import 'package:taskapp/core/utils/app_strings.dart';
 import 'package:taskapp/core/utils/k_colors.dart';
 import 'package:taskapp/features/profileScreen/presentation/view/edit_profile_screen.dart';
@@ -25,6 +27,7 @@ class UserMenuContainer extends StatelessWidget {
               textmenu: AppStrings.profile,
               icon: Icons.person,
               onpressed: () {
+                Get.put(EditDetailsController());
                 Get.to(EditProfileScreen());
               }),
           Container(
