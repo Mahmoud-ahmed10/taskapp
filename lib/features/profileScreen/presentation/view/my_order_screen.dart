@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/core/utils/k_colors.dart';
+import 'package:taskapp/features/profileScreen/presentation/view/widgets/order_items.dart';
 
 class MyOrderScreen extends StatelessWidget {
   const MyOrderScreen({super.key});
@@ -6,8 +8,24 @@ class MyOrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("my oreder")),
-      body: Center(child: Text("my order Page")),
+      appBar: AppBar(
+        title: Text(
+          "My Oreder",
+          style: TextStyle(color: salmonColor, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            OrderItemCard(),
+            OrderItemCard(),
+            OrderItemCard(),
+            OrderItemCard(),
+            OrderItemCard(),
+          ],
+        ),
+      ),
     );
   }
 }
