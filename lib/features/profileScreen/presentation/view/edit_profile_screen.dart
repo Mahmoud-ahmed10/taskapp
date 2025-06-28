@@ -5,6 +5,7 @@ import 'package:taskapp/features/profileScreen/presentation/view/widgets/contain
 import 'package:taskapp/features/profileScreen/presentation/view/widgets/custom_text_form_field.dart';
 import 'package:taskapp/features/profileScreen/presentation/view/widgets/date_of_birth.dart';
 import 'package:taskapp/features/profileScreen/presentation/view/widgets/details_preson.dart';
+import 'package:taskapp/features/profileScreen/presentation/view/widgets/edit_details.dart';
 import 'package:taskapp/features/profileScreen/presentation/view/widgets/gender.dart';
 import '../../../../core/utils/components/app_bar.dart';
 
@@ -19,7 +20,8 @@ class EditProfileScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            DetailsPreson(color: beigeColor),
+            // DetailsPreson(color: beigeColor),
+            EditDetails(),
             SizedBox(height: 20),
             CustomTextFormField(
               LabelText: AppStrings.fullName,

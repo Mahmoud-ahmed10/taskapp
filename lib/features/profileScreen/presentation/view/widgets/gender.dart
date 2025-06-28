@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:taskapp/Controller/controller.dart';
 import 'package:taskapp/core/utils/app_styles.dart';
 import 'package:taskapp/core/utils/k_colors.dart';
 
-class Gender extends StatefulWidget {
+class Gender extends StatelessWidget {
   const Gender({super.key});
 
   @override
-  State<Gender> createState() => _GenderState();
-}
-
-class _GenderState extends State<Gender> {
-  String? selectedGender;
-
-  @override
   Widget build(BuildContext context) {
+    final controller = Get.put(GenderController());
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
       child: Column(
@@ -33,18 +30,16 @@ class _GenderState extends State<Gender> {
                     color: beigeColor,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: RadioListTile<String>(
-                    value: 'Male',
-                    groupValue: selectedGender,
-                    onChanged: (value) {
-                      setState(() {
-                        selectedGender = value!;
-                      });
-                    },
-                    title: Text('Male'),
-                    activeColor: Colors.brown,
-                    contentPadding: EdgeInsets.zero,
-                  ),
+                  child: Obx(() => RadioListTile<String>(
+                        value: 'Male',
+                        groupValue: controller.selectedGender.value,
+                        onChanged: (value) {
+                          controller.setGender(value!);
+                        },
+                        title: Text('Male'),
+                        activeColor: Colors.brown,
+                        contentPadding: EdgeInsets.zero,
+                      )),
                 ),
               ),
               SizedBox(width: 12),
@@ -55,18 +50,16 @@ class _GenderState extends State<Gender> {
                     color: beigeColor,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: RadioListTile<String>(
-                    value: 'Female',
-                    groupValue: selectedGender,
-                    onChanged: (value) {
-                      setState(() {
-                        selectedGender = value!;
-                      });
-                    },
-                    title: Text('Female'),
-                    activeColor: Colors.brown,
-                    contentPadding: EdgeInsets.zero,
-                  ),
+                  child: Obx(() => RadioListTile<String>(
+                        value: 'Female',
+                        groupValue: controller.selectedGender.value,
+                        onChanged: (value) {
+                          controller.setGender(value!);
+                        },
+                        title: Text('Female'),
+                        activeColor: Colors.brown,
+                        contentPadding: EdgeInsets.zero,
+                      )),
                 ),
               ),
             ],
