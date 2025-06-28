@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/core/utils/k_colors.dart';
 
 class OrderItemCard extends StatelessWidget {
   const OrderItemCard({super.key});
@@ -19,7 +20,9 @@ class OrderItemCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 8),
-          const Divider(),
+          const Divider(
+            color: salmonColor,
+          ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -45,17 +48,17 @@ class OrderItemCard extends StatelessWidget {
                             "Serenity Nightstand",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.deepOrange,
+                              color: terracottaColor,
                             ),
                           ),
                         ),
                         Row(
                           children: [
                             Icon(Icons.delete_outline,
-                                size: 20, color: Colors.grey[600]),
+                                size: 20, color: salmonColor),
                             const SizedBox(width: 8),
                             Icon(Icons.add_circle_outline,
-                                size: 20, color: Colors.deepOrange),
+                                size: 20, color: salmonColor),
                           ],
                         ),
                       ],
